@@ -10,13 +10,14 @@
     <div class="container">
         <div class="content">
             <div class="content__counter">
-                <div>
-                    <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="30" cy="31" r="29.5" stroke="white" stroke-opacity="0.5"/>
-                        <path d="M30 1.5C31.2504 1.5 32.3932 1.53682 33.5 1.63965" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <div class="progress-container">
+                    <div class="text"><span>0</span>/<span>7</span>
+                    </div>
+                    <svg>
+                       <circle class="bg" cx="30" cy="30" r="29"></circle>
+                        <circle class="progress" cx="30" cy="30" r="29"></circle>
                     </svg>
                 </div>
-                <div class="counter__timer"><span>0</span>/<span>7</span></div>   
             </div>
             <div class="content__check">
                 <div class="check__title">Чеклист</div>
@@ -27,6 +28,7 @@
                 <button class="content__btn">Открыть чеклист</button>
             </div>
         </div>
+       
     </div>
 </body>
 </html>

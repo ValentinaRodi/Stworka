@@ -56,16 +56,6 @@ button {
     align-items: center;
 }
 
-.counter__timer {
-    position: absolute;
-    left: 0;
-    right: 0;
-
-    text-align: center;
-
-    font-size: 2rem;
-}
-
 .content__check {
     display: flex;
     flex-direction: column;
@@ -119,4 +109,51 @@ button {
     border: 1px solid #FFFFFF;
     background-color: #2364DB;
     color: #FFFFFF;
+}
+
+.progress-container {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+  
+.progress-container svg {
+    width: 60px;
+    height: 60px;
+}
+  
+.progress-container .bg {
+    fill: none;
+    stroke-width: 1px;
+    stroke: #FFFFFF80;
+}
+  
+.progress-container .progress {
+    fill: none;
+    stroke-width: 2px;
+    stroke: #FFFFFF;
+    stroke-linecap: round;
+    stroke-dasharray: 232.36;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+}
+  
+:root {
+    --progress-value: 4;
+}
+
+.progress-container .progress {
+    stroke-dashoffset: calc(233 - (182 * var(--progress-value) / 100));
+}
+  
+.progress-container .text {
+    position: absolute;
+    top: 30%;
+    left: 0;
+   
+    text-align: center;
+
+    width: 100%;
+    font-size: 2rem;
 }
